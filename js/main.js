@@ -125,11 +125,12 @@ function scrollTo(element, to, duration) {
     let section = document.getElementById('section' + itemId);
     menu.classList.add('hidden-menu');
     burger.classList.remove('open');
-    scrollTo(document.documentElement, section.offsetTop, 1000);
+    let timeScroll = 200 * itemId;
+    scrollTo(document.documentElement, section.offsetTop, timeScroll);
   });
 
   topBtn.addEventListener('click', function(){
-    scrollTo(document.documentElement, document.body.offsetTop, 1000);
+    scrollTo(document.documentElement, document.body.offsetTop, 800);
   });
 
   var firstSection = document.getElementById('section1').offsetTop;
