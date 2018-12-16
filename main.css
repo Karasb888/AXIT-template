@@ -45,6 +45,7 @@
   .menu {
     animation-name: menu-anim;
     animation-duration: 0.2s;
+    z-index: 10;
     outline: none;
     position: absolute;
     flex-direction: column;
@@ -1001,6 +1002,7 @@
   background-size: contain;
   position: fixed;
   opacity: 0.75;
+  outline: none;
   bottom: 30px;
   right: 20px;
 }

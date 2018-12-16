@@ -123,8 +123,8 @@ function scrollTo(element, to, duration) {
     let item = e.target;
     let itemId = item.id[item.id.length - 1];
     let section = document.getElementById('section' + itemId);
-    menu.classList.toggle('hidden-menu');
-    burger.classList.toggle('open');
+    menu.classList.add('hidden-menu');
+    burger.classList.remove('open');
     scrollTo(document.documentElement, section.offsetTop, 1000);
   });
 
@@ -134,6 +134,10 @@ function scrollTo(element, to, duration) {
 
   var firstSection = document.getElementById('section1').offsetTop;
   window.onscroll = function(){
+    if(pageYOffset > 350){
+      menu.classList.add('hidden-menu');
+      burger.classList.remove('open');
+    }
     if(pageYOffset > firstSection){
       topBtn.classList.remove('hidden');
     }else{
